@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="{{url_for('static', filename='js/test.js')}}"></script>
+    <!---To add Static files-->
+  </head>
+  <body class="bg-red-400">
+    <form action="/" method="post">
+      <input type="text" id="title" name="title" />
+      <input type="text" id="desc" name="desc" />
+      <input type="submit" />
+    </form>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Desc</th>
+      </tr>
+      {% for i in allToDo %}
+      <tr>
+        <td>{{i.title}}</td>
+        <td>{{i.desc}}</td>
+        <td>
+          <a href="/delete/{{i.sno}}" type="button">DELETE</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
