@@ -32,11 +32,11 @@ with app.app_context():
 
 <br>
 
-`pip install gunicorn`
+`pip install gunicorn` - **enables multithreaded applications.**
 
 <br>
 
-> - **Then install Heroku CLI**
+> - **Then install Heroku CLI from [here](https://devcenter.heroku.com/articles/heroku-cli)**
 
 <br>
 
@@ -87,3 +87,9 @@ with app.app_context():
 `heroku logs --tail` - **check you'r application error'.**
 
 <br>
+
+[My Linkedin](https://www.linkedin.com/in/bharadwaj-rachakonda-b36658258/)
+
+[My Portfolio](https://bharadwajrachakonda.github.io/Portfolio/)
+
+[My Leetcode](https://leetcode.com/BharadwajRachakonda/)
